@@ -4,7 +4,7 @@ import ballerina/http;
 # A service representing a network-accessible API
 # bound to port `9090`.
 # 
-configurable string tokeName = ?;
+configurable string tokenName = ?;
 service / on new http:Listener(9090) {
     
     # A resource for generating greetings
@@ -13,7 +13,7 @@ service / on new http:Listener(9090) {
         // Send a response back to the caller.--
         github:Client githubEp = check new (config = {
             auth: {
-                token:tokeName
+                token:tokenName
         
             }
         });
