@@ -15,7 +15,6 @@ service / on new http:Listener(9090) {
         github:Client githubEp = check new (config = {
             auth: {
                 token: tokenName
-
             }
         });
 
